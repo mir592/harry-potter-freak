@@ -111,7 +111,6 @@ export default {
   mounted () {
     this.$store.dispatch('user/setCharacterSelected', this.characterName)
     this.getCharactersBySlug(this.characterSlug).then(d => {
-      console.log(d)
       this.characterAttributes = d.attributes
       this.$store.dispatch('character/setAllCharacterData', d.attributes)
     })

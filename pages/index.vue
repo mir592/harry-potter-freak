@@ -37,7 +37,6 @@ export default {
   },
   mounted () {
     this.$store.dispatch('user/resetUserData')
-    this.getCharacters().then(d => console.log(d))
   },
   computed: {
     ...mapState('character', ['data'])
