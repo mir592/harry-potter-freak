@@ -2,25 +2,30 @@
   <div>
     <h2>All the data from the user that you choose:</h2>
     <div>
-        <div
-          v-for="(d, key, index) in data"
-          :key="index"
-        >
-          <div v-if="d && typeof(d) === 'string'">
+      <div
+        v-for="(d, key, index) in data"
+        :key="index"
+      >
+        <div v-if="d">
+          <div
+            v-if="typeof(d) === 'string'"
+            class="p-2"
+          >
             <span class="text-capitalize">{{ normalizeKey(key) }}</span>: {{ d }}
           </div>
           <div v-else>
-            <span class="text-capitalize">{{ normalizeKey(key) }}</span>:
+            <span class="text-capitalize p-2">{{ normalizeKey(key) }}</span>:
             <ul
               v-for="(s, index) in  d"
               :key="index"
             >
-            <li>{{ s }}</li>
+              <li>{{ s }}</li>
             </ul>
           </div>
         </div>
+      </div>
     </div>
-    <NuxtLink to='/'>Start again</NuxtLink>
+    <NuxtLink class="btn btn-light" to='/'>Start again</NuxtLink>
   </div>
 </template>
 

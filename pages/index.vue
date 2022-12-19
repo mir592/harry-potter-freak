@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 class="mt-4 mb-4 text-center">Harry Potter characters finder</h1>
     <div
       v-if="data.name"
       class="p-5"
@@ -54,4 +55,3 @@ export default {
   }
 }
 </script>
-

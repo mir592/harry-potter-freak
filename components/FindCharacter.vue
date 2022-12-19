@@ -1,5 +1,5 @@
 <template>
-  <div class="m-5">
+  <div class="m-2 m-md-5">
     <b-form-input
       v-model="text"
       placeholder='Hey muggle, which character are you looking for?'
